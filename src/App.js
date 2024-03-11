@@ -1,5 +1,6 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import Home from './components/Home';
 import './App.css';
 
 export default function App() {
@@ -11,7 +12,9 @@ export default function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <main>Podify</main>
+      <main>
+        <Home/>
+      </main>
     </ThemeProvider>
   );
 }
