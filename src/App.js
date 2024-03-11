@@ -1,11 +1,18 @@
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import './App.css';
 
-
-function App() {
+export default function App() {
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
   return (
-    <div className="App">
-      Podify
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <main>Podify</main>
+    </ThemeProvider>
   );
 }
 
-export default App;
